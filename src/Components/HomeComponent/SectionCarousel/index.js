@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react';
 const SectionCarousel = ({data}) => {
   return (
     <React.Fragment>
-      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" data-ride="carousel" data-interval="2000">
         <div className="carousel-inner">
           {
             data.map((value, key) => {

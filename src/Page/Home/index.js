@@ -49,7 +49,7 @@ const HomePage = () => {
         isModal ? (
           <Modal
             closeModal={() => setIsModal(false)}
-            image={data ? data.qrcode : null} />
+            image={data && data.qrcode} />
         ) : null
       }
     </main>
