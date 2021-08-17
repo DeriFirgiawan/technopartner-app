@@ -13,7 +13,7 @@ const SectionHeader = ({data}) => {
               data.map((value, index) => {
                 return (
                   <div className="menu-link-item">
-                    <Link to={`/menu#${index}`} className="menu-link" key={index}>{value.category_name}</Link>
+                    <Link  to={`/menu#${index}`} className="menu-link" key={index}>{value.category_name}</Link>
                   </div>
                 )
               })
