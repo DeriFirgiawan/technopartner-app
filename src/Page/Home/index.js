@@ -12,6 +12,7 @@ import { home } from '../../Config/Axios/Request/Api';
 const HomePage = () => {
   const [userData] = useState(JSON.parse(localStorage.getItem('userData')));
   const [data, setData] = useState();
+  const [isModal, setIsModal] = useState(false);
   const history = useHistory();
   useEffect(() => {
     if (userData) {
@@ -42,9 +43,15 @@ const HomePage = () => {
           <img src={Logo} alt="Techpartner" />
         </div>
       </RootNavbar>
-      <SectionBanner data={data} />
+      <SectionBanner data={data} onModal={() => setIsModal(true)} />
       <SectionCarousel data={data ? data.banner : []} />
-      <Modal />
+      {
+        isModal ? (
+          <Modal
+            closeModal={() => setIsModal(false)}
+            image={data ? data.qrcode : null} />
+        ) : null
+      }
     </main>
   );
 };
