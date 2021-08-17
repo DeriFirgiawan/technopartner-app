@@ -18,6 +18,7 @@
     padding-bottom: 16px;
     .container {
       .card {
+        background-color: #fff;
         border: none !important;
         border-radius: 20px !important;
         box-shadow: 1px 9px 6px -4px rgba(222,222,222,0.75);
@@ -25,17 +26,40 @@
           padding-top: 24px;
           padding-bottom: 24px;
           padding-left: 40px;
-          padding-right: 40px;
+          padding-right: 30px;
           &-title.name {
             font-weight: bold !important;
           }
           .wrapper {
-            margin-top: 50px;
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 40px;
             .wrapper-code {
-              border: 1px solid black;
+              background-color: #fff;
+              border: 1px solid #ddd;
               border-radius: 76px; 
               width: 76px;
               height: 76px;
+            }
+            
+            .balance {
+              .card-title {
+                line-height: 40px;
+              }
+              border-left: 1px solid #ddd;
+              padding-left: 15px;
+              margin-left: 15px;
+              position: relative;
+              width: 100% !important;
+              height: auto;
+              display: flex;
+              justify-content: space-between;
+              .wrapp {
+                .card-title {
+                  margin: 0 !important;
+                  font-weight: bold;
+                }
+              }
             }
           }
         }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router';
 
 import { apiLogin } from '../../Config/Axios/Request/Auth';
 
@@ -19,6 +20,7 @@ const LoginPage = () => {
   }
 
   const handleClik = () => {
+    history.push('/home');
     apiLogin(formLogin.email, formLogin.password)
     .then(response => {
       console.log(response.data);
