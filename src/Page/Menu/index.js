@@ -34,17 +34,20 @@ const MenuPage = () => {
   return (
     <main className="main-menu">
       <SectionHeader data={listMenu} />
-      {
-        listMenu.map((value, index) => {
-          return (
-            <SectionProduct
-              key={index}
-              nameProduct={value.category_name}
-              content={value.menu}
-            />
-          )
-        })
-      }
+      <section className="root-product">
+        {
+          listMenu.map((value, index) => {
+            return (
+              <SectionProduct
+                id={index}
+                key={index}
+                nameProduct={value.category_name}
+                content={value.menu}
+              />
+            )
+          })
+        }
+      </section>
     </main>
   );
 };

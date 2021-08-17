@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
+import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 
 import './Config/Axios';
 import './Config/Axios/Connection';

@@ -1,6 +1,7 @@
 import { Icon } from '@iconify/react';
 
 const CardBalance = ({content = '-', onModal}) => {
+  const currency = new Intl.NumberFormat('id-ID', {style: 'currency', currency: 'IDR'}).format(content.saldo);
   return (
     <div className="card">
       <div className="card-body">
@@ -18,7 +19,7 @@ const CardBalance = ({content = '-', onModal}) => {
               <h6 className="balance-title">Points</h6>
             </div>
             <div className="wrapp">
-              <h6 className="balance-value">Rp {content.saldo}</h6>
+              <h6 className="balance-value">{currency.slice(0, 10)}</h6>
               <h6 className="balance-value">{content.point}</h6>
             </div>
           </div>
