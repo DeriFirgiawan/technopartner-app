@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router';
 import axios from 'axios';
 
 import { apiLogin } from '../../Config/Axios/Request/Auth';
@@ -7,6 +8,7 @@ import SectionBanner from '../../Components/LoginComponent/SectionBaner';
 import SectionForm from '../../Components/LoginComponent/SectionForm';
 
 const LoginPage = () => {
+  const history = useHistory();
   const [formLogin, setFormLogin] = useState({
     email: '',
     password: '',
@@ -19,14 +21,16 @@ const LoginPage = () => {
   }
 
   const handleClik = () => {
-    apiLogin(formLogin.email, formLogin.password)
-    .then(response => {
-      console.log(response.data);
-    }).catch(err => {
-      if (err) {
-        console.log(err.response);
-      }
-    });
+    console.log('Click')
+    history.push('/home');
+    // apiLogin(formLogin.email, formLogin.password)
+    // .then(response => {
+    //   console.log(response.data);
+    // }).catch(err => {
+    //   if (err) {
+    //     console.log(err.response);
+    //   }
+    // });
   }
   return (
     <section className="section-login-page">

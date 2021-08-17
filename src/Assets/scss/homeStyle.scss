@@ -1,0 +1,45 @@
+.main-home-page {
+  background-color: '#F0F2F5' !important;
+  .navbar {
+    padding: 0 !important;
+    .container {
+      .navbar-brand {
+        img {
+          width: 150px;
+        }
+      }
+    }
+  }
+
+  .bg-banner {
+    background-image: url('../Image/motif.png');
+    background-size: cover;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    .container {
+      .card {
+        border: none !important;
+        border-radius: 20px !important;
+        box-shadow: 1px 9px 6px -4px rgba(222,222,222,0.75);
+        &-body {
+          padding-top: 24px;
+          padding-bottom: 24px;
+          padding-left: 40px;
+          padding-right: 40px;
+          &-title.name {
+            font-weight: bold !important;
+          }
+          .wrapper {
+            margin-top: 50px;
+            .wrapper-code {
+              border: 1px solid black;
+              border-radius: 76px; 
+              width: 76px;
+              height: 76px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
