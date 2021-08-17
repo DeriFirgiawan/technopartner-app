@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
 
+import './Config/Axios';
+import './Config/Axios/Connection';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
