@@ -6,6 +6,7 @@ import SectionBanner from '../../Components/LoginComponent/SectionBaner';
 import SectionForm from '../../Components/LoginComponent/SectionForm';
 
 const LoginPage = () => {
+  const history = useHistory();
   const [formLogin, setFormLogin] = useState({
     email: '',
     password: '',
