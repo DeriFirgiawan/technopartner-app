@@ -1,5 +1,10 @@
 .navbar {
-  max-width: 400px;
+  @media (max-width: 1399.98px) {
+    display: flex !important;
+    max-width: 400px;
+    justify-content: center !important;
+    align-items: center !important;
+  }
   border-top: 1px solid #ddd;
   background-color: #fff !important;
   width: 100% !important;
