@@ -2,7 +2,6 @@
   background-color: #F0F2F5 !important;
   padding-bottom: 20px;
   .menu-header {
-    position: relative;
     background-color: #fff !important;
     padding-top: 21px;
     h3 {
@@ -30,6 +29,7 @@
               display: flex;
               font-size: 18px;
               color: #C4C4C4;
+              text-decoration: none;
               &.active {
                 color: #222222;
               }
@@ -40,43 +40,48 @@
     }
   }
 
-  .main-product {
-    .container {
-      .product-heading {
-        font-weight: bold;
-      }
-    }
-
-    .product {
-      background-color: #fff;
-      padding-top: 15px;
-      padding-bottom: 15px;
+  .root-product {
+    margin-top: 100px;
+    padding-bottom: 50px;
+    .main-product {
+      padding-top: 5px;
       .container {
-        border-bottom: 1px solid #dddd;
-        border-bottom-style: dotted;
-        display: flex;
-        justify-content: space-between;
-        .product-image {
-          img {
-            width: 75px;
-          }
+        .product-heading {
+          font-weight: bold;
         }
-
-        .product-name {
-          h6 {
-            font-size: 16px;
+      }
+  
+      .product {
+        background-color: #fff;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        .container {
+          border-bottom: 1px solid #dddd;
+          border-bottom-style: dotted;
+          display: flex;
+          justify-content: space-between;
+          .product-image {
+            img {
+              width: 75px;
+            }
           }
-          p {
-            font-size: 12px;
-            font-size: bold;
-            color: #C4C4C4;
+  
+          .product-name {
+            h6 {
+              font-size: 16px;
+            }
+            p {
+              font-size: 12px;
+              font-size: bold;
+              color: #C4C4C4;
+            }
           }
-        }
-
-        .product-price {
-          span {
-            font-size: 16px;
-            font-weight: bold;
+  
+          .product-price {
+            span {
+              font-size: 16px;
+              font-weight: bold;
+            }
           }
         }
       }
