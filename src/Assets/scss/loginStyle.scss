@@ -1,0 +1,56 @@
+.section-login-page {
+  padding: 16px !important;
+  overflow: hidden !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    img {
+      width: 250px;
+    }
+  }
+  .section-login-form {
+    .mb-3 {
+      .form-label {
+        color: #C4C4C4;
+        display: flex;
+        justify-content: center;
+      }
+      .form-control {
+        border-radius: 10px;
+        box-shadow: 1px 9px 6px -6px rgba(189,189,189,0.75);
+        font-size: 16px !important;
+      }
+    }
+
+    .section-action-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 89px;
+      .btn {
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 15px;
+        &-light {
+          background-color: #fff;
+          border: 1px solid #C4C4C4 !important;
+          box-shadow: 1px 9px 6px -4px rgba(222,222,222,0.75);
+          padding-right: 20px;
+          padding-left: 20px;
+          padding-bottom: 10px;
+          padding-top: 10px;
+          width: 200px !important;
+          &:active {
+            box-shadow: none;
+            border: 0.1 px #C4C4C4 !important;
+          }
+        }
+      }
+    }
+  }
+}
