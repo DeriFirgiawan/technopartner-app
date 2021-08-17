@@ -18,6 +18,7 @@
     padding-bottom: 16px;
     .container {
       .card {
+        background-color: #fff;
         border: none !important;
         border-radius: 20px !important;
         box-shadow: 1px 9px 6px -4px rgba(222,222,222,0.75);
@@ -25,21 +26,69 @@
           padding-top: 24px;
           padding-bottom: 24px;
           padding-left: 40px;
-          padding-right: 40px;
+          padding-right: 30px;
           &-title.name {
             font-weight: bold !important;
           }
           .wrapper {
-            margin-top: 50px;
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 30px;
             .wrapper-code {
-              border: 1px solid black;
+              background-color: #fff;
+              border: 1px solid #ddd;
               border-radius: 76px; 
               width: 76px;
               height: 76px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              box-shadow:
+                0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+                0 12.5px 10px rgba(0, 0, 0, 0.035),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+                0 100px 80px rgba(0, 0, 0, 0.07)
+              ;
+
+            }
+
+            
+            .balance {
+              .balance-title, .balance-value {
+                line-height: 30px;
+              }
+              .balance-value {
+                font-weight: bold;
+                &:nth-child(2) {
+                  color: green;
+                }
+              }
+              border-left: 1px solid black;
+              border-left-style: dotted;
+              padding-left: 15px;
+              margin-left: 15px;
+              position: relative;
+              width: 100% !important;
+              height: auto;
+              display: flex;
+              justify-content: space-between;
+              .wrapp {
+                .card-title {
+                  margin: 0 !important;
+                  font-weight: bold;
+                }
+              }
             }
           }
         }
       }
     }
+  }
+
+  .modal {
+    display: block !important;
   }
 }
