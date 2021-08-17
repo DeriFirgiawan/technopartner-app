@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import { useHistory } from 'react-router';
-import axios from 'axios';
 
 import { apiLogin } from '../../Config/Axios/Request/Auth';
 
@@ -21,16 +19,12 @@ const LoginPage = () => {
   }
 
   const handleClik = () => {
-    console.log('Click')
-    history.push('/home');
-    // apiLogin(formLogin.email, formLogin.password)
-    // .then(response => {
-    //   console.log(response.data);
-    // }).catch(err => {
-    //   if (err) {
-    //     console.log(err.response);
-    //   }
-    // });
+    apiLogin(formLogin.email, formLogin.password)
+    .then(response => {
+      console.log(response.data);
+    }).catch(err => {
+        console.log(err.response);
+    });
   }
   return (
     <section className="section-login-page">
