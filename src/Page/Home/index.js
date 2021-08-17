@@ -1,8 +1,40 @@
-import RootNavbar from '../../Components/RootNavbar';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect } from 'react';
+import { useHistory } from 'react-router';
 
+import RootNavbar from '../../Components/RootNavbar';
+import SectionBanner from '../../Components/HomeComponent/SectionBanner';
+import SectionCarousel from '../../Components/HomeComponent/SectionCarousel';
+import Modal from '../../Components/HomeComponent/Modal';
 import Logo from '../../Assets/Logo/logo technopartner.png';
+import { home } from '../../Config/Axios/Request/Api';
 
 const HomePage = () => {
+  const [userData] = useState(JSON.parse(localStorage.getItem('userData')));
+  const [data, setData] = useState();
+  const history = useHistory();
+  useEffect(() => {
+    if (userData) {
+      fetchData();
+    } else {
+      history.push('/');
+    }
+  }, []);
+
+  const fetchData = () => {
+    const { access_token, token_type } = userData;
+    home(token_type, access_token)
+    .then(response => {
+      const { result } = response.data;
+      setData(result);
+      console.log(result);
+    }).catch(err => {
+      if (err) {
+        console.log(err.message);
+      }
+    });
+  }
+
   return (
     <main className="main-home-page">
       <RootNavbar>
@@ -10,31 +42,9 @@ const HomePage = () => {
           <img src={Logo} alt="Techpartner" />
         </div>
       </RootNavbar>
-      <section className="bg-banner">
-        <div className="container">
-          <div className="card">
-            <div className="card-body">
-              <h6 className="card-title date">Good Afternoon,</h6>
-              <h5 className="card-title name">Guntur Saputro,</h5>
-              <div className="wrapper">
-                <div className="wrapp">
-                  <div className="wrapper-code"></div>
-                </div>
-                <div className="balance">
-                  <div className="wrapp">
-                    <h6 className="card-title">Saldo</h6>
-                    <h6 className="card-title">Points</h6>
-                  </div>
-                  <div className="wrapp">
-                    <h6 className="card-title balances">Rp 27.000</h6>
-                    <h6 className="card-title point">2.500</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>        
-      </section>
+      <SectionBanner data={data} />
+      <SectionCarousel data={data ? data.banner : []} />
+      <Modal />
     </main>
   );
 };

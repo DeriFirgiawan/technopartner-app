@@ -1,0 +1,23 @@
+.wrapper-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  .carousel-indicators {
+    margin: 0 !important;
+    .dotted {
+      margin: 5px;
+      background-color: #c4c4c4;
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+    }
+  }
+  .more-content {
+    display: flex;
+    h6 {
+      margin-top: 3px;
+      color: green;
+      font-weight: bold;
+    }
+  }
+}
