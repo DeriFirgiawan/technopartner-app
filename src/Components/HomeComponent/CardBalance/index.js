@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
 
-const CardBalance = ({content = '-'}) => {
+const CardBalance = ({content = '-', onModal}) => {
   return (
     <div className="card">
       <div className="card-body">
@@ -8,7 +8,7 @@ const CardBalance = ({content = '-'}) => {
         <h5 className="card-title name">{content.name}</h5>
         <div className="wrapper">
           <div className="wrapp">
-            <div className="wrapper-code">
+            <div className="wrapper-code" onClick={onModal}>
               <Icon icon="ic:baseline-qr-code-2" fontSize={48} />
             </div>
           </div>

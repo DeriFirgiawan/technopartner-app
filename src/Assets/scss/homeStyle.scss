@@ -90,5 +90,19 @@
 
   .modal {
     display: block !important;
+    &-dialog {
+      margin: 0 !important;
+      .modal-content {
+        min-height: 100% !important;
+        .modal-header {
+          border: none !important;
+        }
+        .modal-body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
   }
 }
