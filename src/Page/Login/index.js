@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router';
 
 import { apiLogin } from '../../Config/Axios/Request/Auth';
+import {useHistory} from 'react-router-dom'
 
 import SectionBanner from '../../Components/LoginComponent/SectionBaner';
 import SectionForm from '../../Components/LoginComponent/SectionForm';
