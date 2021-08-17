@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import axios from 'axios';
 
 import { apiLogin } from '../../Config/Axios/Request/Auth';
 
@@ -23,9 +22,7 @@ const LoginPage = () => {
     .then(response => {
       console.log(response.data);
     }).catch(err => {
-      if (err) {
         console.log(err.response);
-      }
     });
   }
   return (
