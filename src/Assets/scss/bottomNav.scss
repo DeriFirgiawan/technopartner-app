@@ -1,0 +1,22 @@
+.navbar {
+  border-top: 1px solid #ddd;
+  .container {
+    .wrapper {
+      width: 100% !important;
+      display: inline-flex !important;
+      flex-direction: row !important;
+      justify-content: space-around !important;
+      .navbar-nav-item {
+        padding-top: 2px;
+        padding-bottom: 0 !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .navbar-link-item {
+          font-size: 28px !important;
+        }
+      }
+    }
+  }
+}
