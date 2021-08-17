@@ -1,6 +1,8 @@
 .navbar {
+  max-width: 400px;
   border-top: 1px solid #ddd;
   background-color: #fff !important;
+  width: 100% !important;
   .container {
     .wrapper {
       width: 100% !important;
@@ -17,6 +19,9 @@
         .navbar-link{
           color: #c4c4c4;
           text-decoration: none !important;
+          &.active {
+            color: #222222;
+          }
         }
       }
     }
